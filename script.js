@@ -1,4 +1,4 @@
-/*document.querySelector(".button").addEventListener("click", function(){
+document.querySelector(".button").addEventListener("click", function(){
   console.log("test click");
   document.querySelector('.vlak1').classList.toggle('vlak1ab')
   document.querySelector('.vlak2').classList.toggle('vlak2ab')
@@ -12,10 +12,9 @@
   document.querySelector('.vlak10').classList.toggle('vlak10ab')
   document.querySelector('.vlak11').classList.toggle('vlak11ab')
 <  document.querySelector('.button').classList.toggle('buttonab')
-0
-});*/
+});
 
-var button = document.querySelector(".button");
+/*var button = document.querySelector(".button");
 var myButtonElements = document.querySelectorAll('div');
 var i = 0;
 
@@ -23,7 +22,13 @@ button.addEventListener("click", function(){
   button.classList.toggle('buttonab')
   while (i < myButtonElements.length) {
       console.log([i]);
-      myButtonElements[i].classList.toggle('vlak'+[i]+'ab');
-  	  i++;
+
+      if (i === "10") {
+        i = 0
+        console.log("i is 11");
+      } else {
+        myButtonElements[i].classList.toggle('vlak'+[i]+'ab');
+    	  i++;
+      }
   }
-});
+});*/
