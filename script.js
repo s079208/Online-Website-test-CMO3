@@ -1,33 +1,29 @@
-// hier komt je code
-// console.log("Hallo wereld!");
-let mijnHamburger = document.querySelector("#hamburger")
-let stand = "closed"
-console.log(stand)
-var voor = document.getElementById("voor");
-var midden = document.getElementById("midden");
-var achter = document.getElementById("achter");
-var nav = document.getElementById("nav")
-function navClick() {
+/*document.querySelector(".button").addEventListener("click", function(){
+  console.log("test click");
+  document.querySelector('.vlak1').classList.toggle('vlak1ab')
+  document.querySelector('.vlak2').classList.toggle('vlak2ab')
+  document.querySelector('.vlak3').classList.toggle('vlak3ab')
+  document.querySelector('.vlak4').classList.toggle('vlak4ab')
+  document.querySelector('.vlak5').classList.toggle('vlak5ab')
+  document.querySelector('.vlak6').classList.toggle('vlak6ab')
+  document.querySelector('.vlak7').classList.toggle('vlak7ab')
+  document.querySelector('.vlak8').classList.toggle('vlak8ab')
+  document.querySelector('.vlak9').classList.toggle('vlak9ab')
+  document.querySelector('.vlak10').classList.toggle('vlak10ab')
+  document.querySelector('.vlak11').classList.toggle('vlak11ab')
+<  document.querySelector('.button').classList.toggle('buttonab')
+0
+});*/
 
-  if (stand == "closed") {
-    console.log("nav opent");
-    stand = "open";
-    console.log(stand)
-    voor.classList.add("voorHamburger");
-    midden.classList.add("middenHamburger");
-    achter.classList.add("achterHamburger");
-    nav.classList.toggle("hidden")
+var button = document.querySelector(".button");
+var myButtonElements = document.querySelectorAll('div');
+var i = 0;
 
-  } else {
-    console.log("nav sluit");
-    stand = "closed";
-    console.log(stand)
-    voor.classList.toggle("voorHamburger");
-    midden.classList.toggle("middenHamburger");
-    achter.classList.toggle("achterHamburger");
-    nav.classList.toggle("hidden")
+button.addEventListener("click", function(){
+  button.classList.toggle('buttonab')
+  while (i < myButtonElements.length) {
+      console.log([i]);
+      myButtonElements[i].classList.toggle('vlak'+[i]+'ab');
+  	  i++;
   }
-
-
-}
-mijnHamburger.addEventListener('click',navClick);
+});

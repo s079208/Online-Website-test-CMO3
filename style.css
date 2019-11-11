@@ -1,135 +1,316 @@
-/* For the international students: we work as much as possible with rem values. If you look at the the reset_plus.css file, you'll see that we applied a CSS rule so that 1rem equals 10px. This is easy to work with */
-
-/* We always follow the Mobile First design principle. This means we start with building the mobile version of the site */
-
-/* Using media queries from certain points on (specified in pixels) we add extra layers of style to create a responsive end-result. An example of a media query:
-
-@media (min-width: 900px) {}
-
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  overflow-x: hidden;
-   }
-header{
-  position: absolute;
-}
-nav{
-  z-index: 100;
-  position: fixed;
-  display: flex;
-  justify-content: space-between ;
-  flex-direction: column ;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .8) ;
-  padding: 6rem;
+  line-height: 1; }
 
-}
-nav a{
-  align-self: center;
-  color: white;
-  font-size: 3rem;
-}
-main{
-  /*display: none;*/
-}
-h1{
-  font-size: 5rem;
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
-}
-h2{
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ONDERSTAANDE UITGANGSPUNTEN ZAGEN WE IN DE LES */
+:root {
+  font-size: 62.5%; }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/*----ColorCode----*/
+/*-----FontSize-----*/
+/*----LineHeight----*/
+main {
+  width: 80vw;
+  margin: auto; }
+
+div {
+  margin-bottom: 2rem; }
+
+h1 {
+  font-family: turnip-re, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 7vw;
+  line-height: 8vw;
+  color: #7CA5A3; }
+
+h2 {
   font-size: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-}
-main a{
-  position: relative;
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  /*border: 1rem solid black;*/
-  height: 30rem;
-  margin-bottom: 5rem;
-}
-img{
-  /*display: none;*/
-  height: 25rem;
+  line-height: 3.2rem;
+  font-family: turnip-re, serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #B13A2C; }
+
+p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: duos-brush, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #826231; }
+
+.vlak1:hover {
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  margin-bottom: 4rem;
+  -webkit-transform: scale(1.1) translatey(20px);
+  -ms-transform: scale(1.1) translatey(20px);
+  transform: scale(1.1) translatey(20px); }
+
+.vlak2:hover {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  /*transform: translatey(200px);
+	margin-bottom: 20rem;*/
+  padding-top: 20rem; }
+
+.vlak3:hover {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  margin-bottom: 10rem;
+  -webkit-transform: translateX(100px) translatey(100px);
+  -ms-transform: translateX(100px) translatey(100px);
+  transform: translateX(100px) translatey(100px); }
+
+.vlak4:hover {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  margin-top: 10rem;
+  -webkit-transform: translateX(-100px) translatey(-100px);
+  -ms-transform: translateX(-100px) translatey(-100px);
+  transform: translateX(-100px) translatey(-100px); }
+
+.vlak5:hover {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.vlak6:hover {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  padding: 20rem; }
+
+.vlak7:hover p {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+.vlak8:hover p {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: skew(180deg);
+  -ms-transform: skew(180deg);
+  transform: skew(180deg); }
+
+.vlak9:hover p {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotateZ(45deg); }
+
+.vlak10:hover p {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: rotateZ(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotateZ(-45deg); }
+
+.vlak11:hover p {
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotateZ(180deg); }
+
+button {
+  display: block;
   width: 40rem;
-  border: 1rem ridge black;
-  border-radius: 5%
-}
-span{
-  display:block;
-}
-
-
-
-.grid{
-  padding: 5rem;
-  grid-gap: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-}
-.lijn{
- border: .5rem solid black;
- height: 0.1rem;
- width: 110vw;
- transform: rotate(20deg);
- margin-top: 30rem;
- margin-left: -10rem;
- animation: infinite;
- animation-name: example;
- animation-duration: 60s;
-}
-
-.hidden{
-  visibility: hidden;
-}
-
-@keyframes example {
-  0%    {margin-top: 30rem;}
-  33%   {margin-top: 20rem;}
-  66%   {margin-top: 40rem;}
-  100%  {margin-top: 30rem;}
-}
-@media (min-width: 600px) {
-  img:hover{
-    border: white ;
-  }
-  nav a:hover{
-    transform: scale(3);
-  }
-}
-
-/*---------------------------------------*/
-#voor, #midden, #achter{
-  background-color: black;
-  height: 10px;
-  width: 45px;
-  border-radius: 5rem;
-  border: .2rem solid white;
-  transition-property: all;
-	transition-duration: 1s;
-}
-#voor, #midden{  margin-bottom: 5px;}
-#hamburger{
-  z-index: 200;
-  position: fixed;
-  right: 5rem;
-  top:8rem;
-  padding: 1rem;
+  margin: auto;
+  padding: 2rem;
+  margin-bottom: 5rem;
   border-radius: 1rem;
-  overflow: hidden;
-}
-#voor{  transform-origin: left top;}
-#achter{  transform-origin: left bottom;}
-.voorHamburger{
-  transform: rotate(47deg);}
-.achterHamburger{
-  transform: rotate(-47deg);}
-.middenHamburger{
-    transform: translateX(-100px);}*/
-/*---------------------------------------*/
+  background-color: #826231;
+  color: #7CA5A3;
+  border: 0.5rem solid #B13A2C;
+  font-size: 2rem;
+  font-weight: bold;
+  visibility: hidden;
+  -webkit-animation-name: buttonani;
+  animation-name: buttonani;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
+
+a {
+  text-decoration: none; }
+
+@-webkit-keyframes buttonani {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes buttonani {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@media (min-width: 600px) {
+  main {
+    margin-top: 5rem;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 2rem; }
+  .vlak1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3; }
+  button {
+    visibility: visible; }
+  .vlak1ab {
+    position: absolute;
+    top: 350px;
+    width: 90%;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .vlak2ab {
+    position: absolute;
+    top: 250px;
+    width: 90%; }
+  .vlak3ab {
+    position: absolute;
+    top: 150px;
+    width: 90%;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .vlak4ab {
+    position: absolute;
+    top: 50px;
+    width: 90%; }
+  .vlak5ab {
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    width: 45%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .vlak6ab {
+    position: absolute;
+    top: 125px;
+    width: 30%;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .vlak7ab {
+    position: absolute;
+    top: 225px;
+    width: 90%;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .vlak8ab {
+    position: absolute;
+    top: 375px;
+    width: 90%; }
+  .vlak9ab {
+    position: absolute;
+    top: 275px;
+    right: -200px;
+    width: 40%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+  .vlak10ab {
+    position: absolute;
+    top: 450px;
+    width: 60%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .vlak11ab {
+    position: absolute;
+    top: 490px;
+    width: 90%;
+    -webkit-transform: skew(45deg) rotate(180deg);
+    -ms-transform: skew(45deg) rotate(180deg);
+    transform: skew(45deg) rotate(180deg); }
+  .buttonab {
+    position: absolute;
+    left: 5rem;
+    bottom: 2rem; } }
