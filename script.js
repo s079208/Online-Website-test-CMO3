@@ -1,34 +1,36 @@
-document.querySelector(".button").addEventListener("click", function(){
-  console.log("test click");
-  document.querySelector('.vlak1').classList.toggle('vlak1ab')
-  document.querySelector('.vlak2').classList.toggle('vlak2ab')
-  document.querySelector('.vlak3').classList.toggle('vlak3ab')
-  document.querySelector('.vlak4').classList.toggle('vlak4ab')
-  document.querySelector('.vlak5').classList.toggle('vlak5ab')
-  document.querySelector('.vlak6').classList.toggle('vlak6ab')
-  document.querySelector('.vlak7').classList.toggle('vlak7ab')
-  document.querySelector('.vlak8').classList.toggle('vlak8ab')
-  document.querySelector('.vlak9').classList.toggle('vlak9ab')
-  document.querySelector('.vlak10').classList.toggle('vlak10ab')
-  document.querySelector('.vlak11').classList.toggle('vlak11ab')
-<  document.querySelector('.button').classList.toggle('buttonab')
+let drake = dragula([document.querySelector('.nouns'), document.querySelector('.poem'),document.querySelector('.adjectives'),document.querySelector('.articles'),document.querySelector('.punctuationMarks ')]);
+
+drake.on("dragend", function() {
+	let myParagraphs = document.querySelector(".poem").querySelectorAll("p");
+	let myString = "";
+	let nameCapitalized;
+	let i = 0;
+	while (i < myParagraphs.length) {
+		if (myParagraphs[i].className === "input") {
+			myString += " " + myParagraphs[i].querySelector("select").value + " ";
+		} else {
+			myString += myParagraphs[i].innerHTML + " ";
+		}
+		i++;
+	}
+	nameCapitalized = myString.charAt(0).toUpperCase() + myString.slice(1) + "."
+	document.querySelector("h2").innerHTML = nameCapitalized;
 });
 
-/*var button = document.querySelector(".button");
-var myButtonElements = document.querySelectorAll('div');
-var i = 0;
+/*----------------fixed header-------------*/
+window.onscroll = function() {myFunction()};
+var header = document.querySelector('h2');
+var hadrie = document.querySelectorAll('h3');
+var sticky = header.offsetTop;
 
-button.addEventListener("click", function(){
-  button.classList.toggle('buttonab')
-  while (i < myButtonElements.length) {
-      console.log([i]);
-
-      if (i === "10") {
-        i = 0
-        console.log("i is 11");
-      } else {
-        myButtonElements[i].classList.toggle('vlak'+[i]+'ab');
-    	  i++;
-      }
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+		hadrie[0].classList.add("paddingh3");
+  } else {
+    header.classList.remove("sticky");
+		hadrie[0].classList.remove("paddingh3");
   }
-});*/
+}
+
+/*----------------fixed header-------------*/
